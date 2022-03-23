@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from "react";
-
+import {selecOperacion} from '../helpers/misFunciones.js';
 function Resultado(props){
 const [salida,setSalida] = useState(0);
     let dato = props.datosOperando;
