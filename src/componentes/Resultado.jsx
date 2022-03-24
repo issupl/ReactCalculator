@@ -35,15 +35,15 @@ const [salida,setSalida] = useState(0);
             default:
                 props.setDatos({...dato,primerOper:0,segundoOper:0}); 
                 props.setParaElC(0);
-                props.setOperacion("+");
-                setSalida("");
+                setSalida(0);
                 console.log('Por default props.paraElC',props.paraElC)
            
             break;
         }
-    },[props.operaciones,props.paraElC])
+    },[props.operaciones])
+/*[props.operaciones,props.paraElC]*/
 
-    return(<div>{salida}</div>)
+    return(<div>Resultado desde el componente: {salida}</div>)
 }
 
 export default Resultado;
