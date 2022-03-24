@@ -6,8 +6,6 @@ function Input(entradas){
  useEffect(()=>{
      setElC(entradas.paraElC) ;
      entradas.setParaElC(1);
-     
-     console.log(`el elC ${elC}`);
      for(let elemento of document.querySelectorAll('input')){
          elemento.value = 0;
      }

@@ -41,7 +41,6 @@ const [salida,setSalida] = useState(0);
             break;
         }
     },[props.operaciones])
-/*[props.operaciones,props.paraElC]*/
 
     return(<div>Resultado desde el componente: {salida}</div>)
 }
