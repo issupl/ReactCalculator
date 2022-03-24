@@ -2,7 +2,7 @@ const dato = {
     primerOper: 0,
     segundoOper: 0,
     result:0,
-    operacionEscogida: ["+","-","/","*"]
+    operacionEscogida: ["+","-","/","*","C"]
 }
 
 
@@ -19,7 +19,9 @@ export function selecOperacion(operacion,dato){
         case "+" :op = oper1 + oper2;break;
         case "-" :op = oper1 - oper2;break;
         case "/" :op= oper1 / oper2;break; 
-        default:op="";break;
+        default:op="";
+        
+        break;
     }
 
     return op;
