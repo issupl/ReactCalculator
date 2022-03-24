@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from "react";
-import {selecOperacion} from '../helpers/misFunciones.js';
+
 function Resultado(props){
 const [salida,setSalida] = useState(0);
     let dato = props.datosOperando;
@@ -7,6 +7,7 @@ const [salida,setSalida] = useState(0);
     let oper2 = parseInt(dato.segundoOper,10);
     let op;
     
+    console.log('Qué trae: ',  dato,props)
 
     useEffect(()=>{
         
@@ -31,9 +32,16 @@ const [salida,setSalida] = useState(0);
             
             setSalida(op);
              break;
-            default:  setSalida("");break;
+            default:
+                props.setDatos({...dato,primerOper:0,segundoOper:0}); 
+                props.setParaElC(0);
+                props.setOperacion("+");
+                setSalida("");
+                console.log('Por default props.paraElC',props.paraElC)
+           
+            break;
         }
-    },[props.operaciones])
+    },[props.operaciones,props.paraElC])
 
     return(<div>{salida}</div>)
 }
