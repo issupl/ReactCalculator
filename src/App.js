@@ -12,7 +12,7 @@ function App() {
   const [paraElC,setParaElC] = useState(1);
 
   function changeFirstNumberHandler (event,paraElC) {
-    console.log('En changeFirstNumberHandler paraElC:',paraElC)
+    console.log('En changeFirstNumberHandler paraElC:',paraElC,datos.primerOper,datos.segundoOper)
     if(paraElC === 1){
       
       event.target.name === "primerOper" ? setDatos({...datos,segundoOper:event.target.value}) : setDatos({...datos,primerOper:event.target.value});  

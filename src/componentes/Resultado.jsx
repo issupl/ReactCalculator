@@ -7,7 +7,7 @@ const [salida,setSalida] = useState(0);
     let oper2 = parseInt(dato.segundoOper,10);
     let op;
     
-    console.log('Qué trae: ',  dato,props)
+    /*console.log('Qué trae: ',  dato,props)*/
 
     useEffect(()=>{
         
@@ -20,7 +20,7 @@ const [salida,setSalida] = useState(0);
             break;
             case "+" : 
             op = oper1 + oper2;
-            console.log("op:",op)
+            /*console.log("op:",op)*/
             setSalida(op);
              break;
             case "-" : 
@@ -36,7 +36,7 @@ const [salida,setSalida] = useState(0);
                 props.setDatos({...dato,primerOper:0,segundoOper:0}); 
                 props.setParaElC(0);
                 setSalida(0);
-                console.log('Por default props.paraElC',props.paraElC)
+               /* console.log('Por default props.paraElC',props.paraElC)*/
            
             break;
         }
