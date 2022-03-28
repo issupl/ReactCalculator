@@ -2,7 +2,7 @@ const dato = {
     primerOper: 0,
     segundoOper: 0,
     result:0,
-    operacionEscogida: ["+","-","/","*","C"]
+    operacionEscogida: ["+","-","/","*","C","M+","MR"]
 }
 
 

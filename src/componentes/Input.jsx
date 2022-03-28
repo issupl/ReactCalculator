@@ -22,7 +22,7 @@ function Input(entradas){
  },[entradas.paraElC]);
 
  let elotro = valoresNombreInput.map((item,index)=>{
-     return <Input0 evento={entradas} elC={elC} elname={item}/>
+     return <Input0 elMr={entradas.elMr} evento={entradas} elC={elC} elname={item}/>
  })
  let salida = valoresNombreInput.map((item,index)=>{
     

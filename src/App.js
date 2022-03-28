@@ -10,9 +10,10 @@ function App() {
   const [operacion,setOperacion] = useState("");
   const [salidFun,setSalidaFun] = useState(0);
   const [paraElC,setParaElC] = useState(1);
+  const [elMr,setelMr] = useState(0);
 
   function changeFirstNumberHandler (event,paraElC) {
-    console.log('En changeFirstNumberHandler paraElC:',paraElC,datos.primerOper,datos.segundoOper)
+    
     if(paraElC === 1){
       
       event.target.name === "primerOper" ? setDatos({...datos,segundoOper:event.target.value}) : setDatos({...datos,primerOper:event.target.value});  
@@ -32,9 +33,9 @@ function App() {
     <div>
       <h1>Calculadora</h1>
      
-      <Input unaFuncion={changeFirstNumberHandler}  paraElC={paraElC} setParaElC={setParaElC}/>
+      <Input elMr={elMr} unaFuncion={changeFirstNumberHandler}  paraElC={paraElC} setParaElC={setParaElC}/>
       <Boton lasOperaciones={datos.operacionEscogida} setOper={setOperacion}/>
-      <Resultado datosOperando = {datos} operaciones={operacion} paraElC={paraElC} setDatos={setDatos} setParaElC={setParaElC}/>
+      <Resultado setelMr={setelMr} datosOperando = {datos} operaciones={operacion} paraElC={paraElC} setDatos={setDatos} setParaElC={setParaElC}/>
       <div>Salida de la función: {salidFun}</div>
     </div>
   );
