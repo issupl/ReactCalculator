@@ -12,9 +12,9 @@ function Input(entradas){
  useEffect(()=>{
      setElC(entradas.paraElC) ;
      entradas.setParaElC(1);
-     for(let elemento of document.querySelectorAll('input')){
+     /*for(let elemento of document.querySelectorAll('input')){
          elemento.value = 0;
-     }
+     }*/
      
      setLaRef(referencia);
      console.log('esta es la laref',laref)
@@ -22,7 +22,7 @@ function Input(entradas){
  },[entradas.paraElC]);
 
  let elotro = valoresNombreInput.map((item,index)=>{
-     return <Input0 elMr={entradas.elMr} evento={entradas} elC={elC} elname={item}/>
+     return <Input0 laprop={entradas.setParaElC} elMr={entradas.elMr} evento={entradas} setElC={setElC} elC={elC} elname={item}/>
  })
  let salida = valoresNombreInput.map((item,index)=>{
     
